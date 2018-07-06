@@ -9,7 +9,7 @@ class Triangle
 
   def kind
 
-      if (@a == 0 || @b == 0 || @c == 0)
+      if (@a == 0 || @b == 0 || @c == 0)    
         #errorhandler
         begin
              raise TriangleError
@@ -17,15 +17,19 @@ class Triangle
           #errorhandler
 
       end
-
-      if (@a == @b &&  @b == @c)
-        return :equilateral
-      elsif (@a == @b || @b == @c || @a == @c)
-            return :isosceles
-      else
-            return   :scalene
+      if (@a+@b>@c && @a+@c>@b && @b+@c<@a)
+            if (@a == @b &&  @b == @c)
+              return :equilateral
+            elsif (@a == @b || @b == @c || @a == @c)
+                  return :isosceles
+            else
+                  return   :scalene
+            end
+      else  
+            begin
+                 raise TriangleError
+            end    
       end
-
     end
 
     class TriangleError < StandardError
