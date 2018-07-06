@@ -17,7 +17,7 @@ class Triangle
           #errorhandler
 
       end
-      if (@a+@b>@c && @a+@c>@b && @b+@c<@a)
+      # if (@a+@b>@c && @a+@c>@b && @b+@c<@a)
             if (@a == @b &&  @b == @c)
               return :equilateral
             elsif (@a == @b || @b == @c || @a == @c)
@@ -25,11 +25,11 @@ class Triangle
             else
                   return   :scalene
             end
-      else
-            begin
-                 raise TriangleError
-            end    
-      end
+      # else
+      #       begin
+      #            raise TriangleError
+      #       end
+      # end
     end
 
     class TriangleError < StandardError
