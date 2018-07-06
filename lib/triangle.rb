@@ -21,7 +21,7 @@ class Triangle
          begin
               raise TriangleError
          end
-       end    
+       end
             if (@a == @b &&  @b == @c)
               return :equilateral
             elsif (@a == @b || @b == @c || @a == @c)
@@ -29,7 +29,7 @@ class Triangle
             else
                   return   :scalene
             end
-      
+
     end
 
     class TriangleError < StandardError
