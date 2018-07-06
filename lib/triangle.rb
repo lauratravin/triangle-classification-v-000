@@ -9,7 +9,7 @@ class Triangle
 
   def kind
 
-      if (@a == 0 || @b == 0 || @c == 0)    
+      if (@a == 0 || @b == 0 || @c == 0)
         #errorhandler
         begin
              raise TriangleError
@@ -25,7 +25,7 @@ class Triangle
             else
                   return   :scalene
             end
-      else  
+      else
             begin
                  raise TriangleError
             end    
